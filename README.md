@@ -1,5 +1,7 @@
 # Paths Changes Filter
 
+!! This is a fork of https://github.com/dorny/paths-filter to add the missing 'predicate-quantifier' param !!
+
 [GitHub Action](https://github.com/features/actions) that enables conditional execution of workflow steps and jobs, based on the files modified by pull request, on a feature
 branch, or by the recently pushed commits.
 
@@ -154,14 +156,14 @@ For more information, see [CHANGELOG](https://github.com/dorny/paths-filter/blob
     # Default: ${{ github.token }}
     token: ''
 
-    # Optional parameter to override the default behavior of file matching algorithm. 
+    # Optional parameter to override the default behavior of file matching algorithm.
     # By default files that match at least one pattern defined by the filters will be included.
     # This parameter allows to override the "at least one pattern" behavior to make it so that
-    # all of the patterns have to match or otherwise the file is excluded. 
-    # An example scenario where this is useful if you would like to match all 
-    # .ts files in a sub-directory but not .md files. 
-    # The filters below will match markdown files despite the exclusion syntax UNLESS 
-    # you specify 'every' as the predicate-quantifier parameter. When you do that, 
+    # all of the patterns have to match or otherwise the file is excluded.
+    # An example scenario where this is useful if you would like to match all
+    # .ts files in a sub-directory but not .md files.
+    # The filters below will match markdown files despite the exclusion syntax UNLESS
+    # you specify 'every' as the predicate-quantifier parameter. When you do that,
     # it will only match the .ts files in the subdirectory as expected.
     #
     # backend:
